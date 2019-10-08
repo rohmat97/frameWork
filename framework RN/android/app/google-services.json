@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "356678143218",
+    "firebase_url": "https://era-bangun-jaya.firebaseio.com",
+    "project_id": "era-bangun-jaya",
+    "storage_bucket": "era-bangun-jaya.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356678143218:android:478cbf31757af601",
+        "android_client_info": {
+          "package_name": "com.erabangunjaya.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356678143218-7u20fmiakt9189k4l052lt9qdthoo344.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.erabangunjaya.android",
+            "certificate_hash": "d499949c8d170561afc8af2c45462d587c1c291e"
+          }
+        },
+        {
+          "client_id": "356678143218-eki7i0uqrac96s172tj7tf7hl1u9vd06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXBaFMO9chVGUsjPfUwBSh5mD6XbwDTsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356678143218-eki7i0uqrac96s172tj7tf7hl1u9vd06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
