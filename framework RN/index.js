@@ -7,4 +7,4 @@ import AppStackNavigator from './app/components/AppStackNavigator';
 
 import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => AppStackNavigator);
+AppRegistry.registerComponent(appName, () => Login);

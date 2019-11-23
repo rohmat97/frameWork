@@ -10,8 +10,32 @@ import {
 } from 'react-native';
 
 export default class Login extends Component {
+
+  state = {
+    splash: false,
+  }
+
+  componentDidMount () {
+     setTimeout(() => {
+       this.setState({ splash: true })
+     }, 2500)
+   }
+
+
+   Splash () {
+     return <View style={styles.container}>
+         <Text>
+             Ini Splash Screen
+         </Text>
+     </View>
+   }
+
   render() {
-    return (
+    if (this.state.ready === false) {
+      return <Splash />
+    }
+
+    return(
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
           <View style={styles.up}>
@@ -42,8 +66,9 @@ export default class Login extends Component {
           </View>
         </View>
       </TouchableWithoutFeedback>
-
     )
+
+
   }
 }
 
