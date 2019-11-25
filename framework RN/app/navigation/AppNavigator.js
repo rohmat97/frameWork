@@ -2,16 +2,14 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 // import { Transition } from 'react-native-reanimated';
-import CounterApp from '../modules/main/greeting';
-import items from '../modules/main/lotsOfGreetings';
+import Home from '../modules/main/home';
 
 const AppNavigator = createAnimatedSwitchNavigator(
   {
-    CounterApp: { screen: CounterApp },
-    item: { screen: items },
+    Home: { screen: Home },
   },
   {
-    initialRouteName: 'CounterApp',
+    initialRouteName: 'Home',
     headerMode: 'none',
   }
 );
