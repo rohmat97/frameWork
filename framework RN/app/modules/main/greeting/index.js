@@ -1,3 +1,6 @@
+/* eslint-disable react/require-optimization */
+/* eslint-disable no-shadow */
+/* eslint-disable react/prop-types */
 /* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
@@ -5,15 +8,16 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Button } from 'native-base';
 import { StackActions, NavigationActions } from 'react-navigation';
+import { increaseCounter, decreaseCounter } from '../mainActions';
 
 class CounterApp extends Component {
-  static propTypes = {
-    navigation: PropTypes.shape({
-      navigate: PropTypes.func.isRequired,
-    }).isRequired,
-  };
   render() {
-    const { navigation } = this.props;
+    const {
+      navigation,
+      increaseCounter,
+      decreaseCounter,
+      counter,
+    } = this.props;
     return (
       <View style={styles.container}>
         <View
@@ -23,11 +27,11 @@ class CounterApp extends Component {
             justifyContent: 'space-around',
           }}
         >
-          <TouchableOpacity onPress={() => this.props.increaseCounter()}>
+          <TouchableOpacity onPress={() => increaseCounter()}>
             <Text style={{ fontSize: 20 }}>Increase</Text>
           </TouchableOpacity>
-          <Text style={{ fontSize: 20 }}>{this.props.counter}</Text>
-          <TouchableOpacity onPress={() => this.props.decreaseCounter()}>
+          <Text style={{ fontSize: 20 }}>{counter}</Text>
+          <TouchableOpacity onPress={() => decreaseCounter()}>
             <Text style={{ fontSize: 20 }}>Decrease</Text>
           </TouchableOpacity>
         </View>
@@ -44,8 +48,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  increaseCounter: () => dispatch({ type: 'INCREASE_COUNTER' }),
-  decreaseCounter: () => dispatch({ type: 'DECREASE_COUNTER' }),
+  increaseCounter: () => increaseCounter(),
+  decreaseCounter: () => decreaseCounter(),
 };
 
 export default connect(
