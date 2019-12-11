@@ -10,10 +10,7 @@ class items extends Component {
     return (
       <View style={{ alignItems: 'center', top: 50 }}>
         <Text>{this.props.counter}</Text>
-        <Button
-          onPress={() =>navigation.navigate('CounterApp')
-          }
-        >
+        <Button onPress={() => navigation.navigate('CounterApp')}>
           <Text>TEST</Text>
         </Button>
       </View>
@@ -25,11 +22,10 @@ const mapStateToProps = state => ({
   counter: state.main.counter,
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-  };
-}
-
+const mapDispatchToProps = {
+  increaseCounter: () => dispatch({ type: 'INCREASE_COUNTER' }),
+  decreaseCounter: () => dispatch({ type: 'DECREASE_COUNTER' }),
+};
 export default connect(
   mapStateToProps,
   mapDispatchToProps

@@ -31,10 +31,7 @@ class CounterApp extends Component {
             <Text style={{ fontSize: 20 }}>Decrease</Text>
           </TouchableOpacity>
         </View>
-        <Button
-          onPress={() =>navigation.navigate('item')
-          }
-        >
+        <Button onPress={() => navigation.navigate('item')}>
           <Text>TEST</Text>
         </Button>
       </View>
@@ -42,18 +39,14 @@ class CounterApp extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    counter: state.main.counter,
-  };
-}
+const mapStateToProps = state => ({
+  counter: state.main.counter,
+});
 
-function mapDispatchToProps(dispatch) {
-  return {
-    increaseCounter: () => dispatch({ type: 'INCREASE_COUNTER' }),
-    decreaseCounter: () => dispatch({ type: 'DECREASE_COUNTER' }),
-  };
-}
+const mapDispatchToProps = {
+  increaseCounter: () => dispatch({ type: 'INCREASE_COUNTER' }),
+  decreaseCounter: () => dispatch({ type: 'DECREASE_COUNTER' }),
+};
 
 export default connect(
   mapStateToProps,
