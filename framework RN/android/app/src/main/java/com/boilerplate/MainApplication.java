@@ -1,4 +1,4 @@
-package com.erabangunjaya.android;
+package com.boilerplate;
 
 import android.app.Application;
 import android.util.Log;

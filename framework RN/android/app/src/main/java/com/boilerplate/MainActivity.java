@@ -1,4 +1,4 @@
-package com.erabangunjaya.android;
+package com.boilerplate;
 
 import com.facebook.react.ReactActivity;
 
