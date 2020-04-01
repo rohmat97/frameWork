@@ -1,4 +1,4 @@
-package com.boilerplate;
+package com.rd.framework;
 
 import android.app.Application;
 import android.util.Log;
