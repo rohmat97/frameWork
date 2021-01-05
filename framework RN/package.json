@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@jumpn/react-native-jetifier": "^0.1.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "i18n-js": "^3.3.0",
     "native-base": "^2.13.5",
     "numbro": "^2.1.2",
